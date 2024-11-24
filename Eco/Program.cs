@@ -29,6 +29,9 @@ namespace Eco
                 app.UseSwaggerUI();
             }
 
+            // Explicitly bind the app to all interfaces (important for external access)
+            app.Urls.Add("http://0.0.0.0:5037");
+
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
